@@ -1,0 +1,300 @@
+/* =========================================
+   🌍 GLOBAL RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================
+   📦 MAIN APP
+========================================= */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================
+   🌞 LIGHT THEME
+========================================= */
+
+.app.light-theme {
+  background: #f5f7fb;
+  color: #222;
+  min-height: 100vh;
+}
+
+
+/* =========================================
+   🌙 DARK THEME
+========================================= */
+
+.app.dark-theme {
+  background: #0f172a;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+
+/* =========================================
+   📄 PAGE CONTENT
+========================================= */
+
+.page-content {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* LIGHT PAGE */
+
+.light-theme .page-content {
+  background: #f5f7fb;
+  color: #222;
+}
+
+
+/* DARK PAGE */
+
+.dark-theme .page-content {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   📦 COMMON CONTAINER
+========================================= */
+
+.container {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  padding: 40px;
+  text-align: center;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================
+   🏷️ HEADINGS
+========================================= */
+
+h1 {
+  color: #38bdf8;
+}
+
+.light-theme h2,
+.light-theme h3,
+.light-theme h4,
+.light-theme p {
+  color: #222;
+}
+
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme p {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   🧾 CARDS
+========================================= */
+
+.card {
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 250px;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* 🌞 LIGHT CARD */
+
+.light-theme .card {
+  background: #ffffff;
+  color: #222;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 🌙 DARK CARD */
+
+.dark-theme .card {
+  background: #1e293b;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+
+/* =========================================
+   ✨ CARD HOVER
+========================================= */
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+/* LIGHT HOVER */
+
+.light-theme .card:hover {
+  background: #e2e8f0;
+}
+
+
+/* DARK HOVER */
+
+.dark-theme .card:hover {
+  background: #334155;
+}
+
+
+/* =========================================
+   🔘 COMMON BUTTON
+========================================= */
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.2s ease;
+}
+
+
+/* LIGHT BUTTON */
+
+.light-theme .btn {
+  background: #007bff;
+  color: #ffffff;
+}
+
+
+/* DARK BUTTON */
+
+.dark-theme .btn {
+  background: #38bdf8;
+  color: #000000;
+}
+
+
+/* BUTTON HOVER */
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   🌙 GLOBAL THEME TOGGLE
+========================================= */
+
+.toggle-btn {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+
+/* LIGHT TOGGLE */
+
+.light-theme .toggle-btn {
+  background: #222;
+  color: #ffffff;
+}
+
+
+/* DARK TOGGLE */
+
+.dark-theme .toggle-btn {
+  background: #ffffff;
+  color: #000000;
+}
+
+
+/* TOGGLE HOVER */
+
+.toggle-btn:hover {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   🔗 LINKS
+========================================= */
+
+.light-theme a {
+  color: #0284c7;
+}
+
+.dark-theme a {
+  color: #38bdf8;
+}
+
+
+/* =========================================
+   📱 RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 25px 15px;
+  }
+
+  .card {
+    width: calc(100% - 30px);
+    max-width: 350px;
+  }
+
+}

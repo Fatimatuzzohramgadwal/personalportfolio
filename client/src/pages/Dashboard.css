@@ -1,0 +1,133 @@
+/* 🌍 DASHBOARD BASE */
+.dashboard {
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+/* 📌 HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* ✅ BUTTON GROUP FIX */
+.header div {
+  display: flex;
+  gap: 12px;
+}
+
+/* 🔘 TOGGLE BUTTON */
+.toggle-btn {
+  background: #007bff;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* 🔴 LOGOUT BUTTON */
+.logout-btn {
+  background: #ff4d4d;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* 🔍 SEARCH */
+.search {
+  padding: 10px;
+  width: 300px;
+  margin: 20px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* 📊 CHART */
+.chart {
+  width: 100%;
+  height: 300px;
+}
+
+/* 📦 TABLE WRAPPER */
+.tableWrapper {
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* 🌞 LIGHT MODE */
+body.light .dashboard {
+  background: #f5f7fb;
+  color: #222;
+}
+
+body.light .tableWrapper {
+  background: #ffffff;
+}
+
+body.light .search {
+  background: #fff;
+  color: #000;
+}
+
+/* 🌙 DARK MODE */
+body.dark .dashboard {
+  background: #121212;
+  color: #fff;
+}
+
+body.dark .tableWrapper {
+  background: #1e1e1e;
+}
+
+body.dark .search {
+  background: #2c2c2c;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+/* 📋 TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 🗑 DELETE BUTTON */
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 📄 PAGINATION */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ❌ ERROR */
+.error {
+  color: red;
+}
+
+/* ✨ SMOOTH UI */
+* {
+  transition: all 0.25s ease;
+}
