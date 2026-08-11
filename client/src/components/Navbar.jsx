@@ -6,6 +6,7 @@ import {
   FaProjectDiagram,
   FaMoon,
   FaSun,
+  FaLock,
 } from "react-icons/fa";
 
 function Navbar({ darkMode, toggleTheme }) {
@@ -33,7 +34,6 @@ function Navbar({ darkMode, toggleTheme }) {
 
       {/* NAVIGATION */}
       <div style={styles.navLinks}>
-
         <Link to="/" style={linkStyle(darkMode)}>
           <FaHome />
           <span>Home</span>
@@ -56,6 +56,12 @@ function Navbar({ darkMode, toggleTheme }) {
 
         <Link to="/contact" style={linkStyle(darkMode)}>
           <span>Contact</span>
+        </Link>
+
+        {/* ADMIN LOGIN */}
+        <Link to="/login" style={linkStyle(darkMode)}>
+          <FaLock />
+          <span>Admin Login</span>
         </Link>
 
         {/* THEME TOGGLE */}
@@ -84,100 +90,64 @@ function Navbar({ darkMode, toggleTheme }) {
   );
 }
 
-
-/* =========================================
-   🔗 NAVIGATION LINK STYLE
-========================================= */
-
+/* Navigation Link Style */
 const linkStyle = (darkMode) => ({
   display: "inline-flex",
   alignItems: "center",
   gap: "7px",
-
   margin: "0 5px",
   padding: "9px 10px",
-
   color: darkMode ? "#ffffff" : "#111827",
-
   textDecoration: "none",
-
   fontSize: "15px",
   fontWeight: "500",
-
   borderRadius: "6px",
-
   transition: "all 0.25s ease",
 });
 
-
-/* =========================================
-   🎨 NAVBAR STYLES
-========================================= */
-
+/* Navbar Styles */
 const styles = {
   navbar: {
     width: "100%",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-
     padding: "14px 40px",
-
     minHeight: "68px",
-
     boxSizing: "border-box",
-
     position: "relative",
-
     zIndex: 1000,
-
     transition:
       "background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease",
   },
 
-  /* LOGO */
   logo: {
     margin: 0,
-
     fontSize: "24px",
     fontWeight: "bold",
-
     textDecoration: "none",
-
     whiteSpace: "nowrap",
   },
 
-  /* NAVIGATION CONTAINER */
   navLinks: {
     display: "flex",
     alignItems: "center",
-
     gap: "4px",
-
     flexWrap: "wrap",
   },
 
-  /* THEME BUTTON */
   toggleButton: {
     marginLeft: "12px",
-
     width: "40px",
     height: "40px",
-
     border: "none",
-
     borderRadius: "50%",
-
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-
     cursor: "pointer",
-
     fontSize: "16px",
-
     transition: "all 0.25s ease",
-
     flexShrink: 0,
   },
 };

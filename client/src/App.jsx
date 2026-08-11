@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar.jsx";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -13,26 +13,21 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 
 function App() {
-  // 🌙 Global theme state
   const [darkMode, setDarkMode] = useState(true);
 
-  // 🔄 Toggle theme
   const toggleTheme = () => {
     setDarkMode((prev) => !prev);
   };
 
   return (
     <BrowserRouter>
-      {/* Entire application gets the theme */}
       <div className={darkMode ? "app dark-theme" : "app light-theme"}>
 
-        {/* Navbar */}
         <Navbar
           darkMode={darkMode}
           toggleTheme={toggleTheme}
         />
 
-        {/* Pages */}
         <main className="page-content">
           <Routes>
             <Route path="/" element={<Home />} />
