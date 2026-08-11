@@ -1,189 +1,195 @@
 /* 🌍 DASHBOARD BASE */
 .dashboard {
-  padding: 40px;
-  transition: all 0.3s ease;
+padding: 40px;
+transition: all 0.3s ease;
 }
 
 /* 📌 HEADER */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 25px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 25px;
 }
 
-/* ✅ BUTTON GROUP FIX */
+/* BUTTON GROUP */
 .header div {
-  display: flex;
-  gap: 12px;
+display: flex;
+gap: 12px;
 }
 
 /* 🔘 TOGGLE BUTTON */
 .toggle-btn {
-  background: #007bff;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
+background: #007bff;
+color: white;
+padding: 8px 14px;
+border-radius: 6px;
+border: none;
+cursor: pointer;
 }
 
 /* 🔴 LOGOUT BUTTON */
 .logout-btn {
-  background: #ff4d4d;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
+background: #ff4d4d;
+color: white;
+padding: 8px 14px;
+border-radius: 6px;
+border: none;
+cursor: pointer;
 }
 
 /* 🔍 SEARCH */
 .search {
-  padding: 10px;
-  width: 300px;
-  margin: 20px 0;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+padding: 10px;
+width: 300px;
+margin: 20px 0;
+border-radius: 8px;
+border: 1px solid #ccc;
 }
 
 /* 📊 CHART */
 .chart {
-  width: 100%;
-  height: 300px;
+width: 100%;
+height: 300px;
 }
 
 /* 📦 TABLE WRAPPER */
 .tableWrapper {
-  padding: 20px;
-  border-radius: 10px;
-  transition: 0.3s;
+padding: 20px;
+border-radius: 10px;
+transition: 0.3s;
 }
 
 /* 🌞 LIGHT MODE */
 body.light .dashboard {
-  background: #f5f7fb;
-  color: #111827;
+background: #f5f7fb;
+color: #111827;
 }
 
 body.light .tableWrapper {
-  background: #ffffff;
+background: #ffffff;
 }
 
 body.light .search {
-  background: #fff;
-  color: #000;
+background: #ffffff;
+color: #000000;
 }
 
 /* 🌙 DARK MODE */
 body.dark .dashboard {
-  background: #121212;
-  color: #fff;
+background: #121212;
+color: #ffffff;
 }
 
 body.dark .tableWrapper {
-  background: #1e1e1e;
+background: #1e1e1e;
 }
 
 body.dark .search {
-  background: #2c2c2c;
-  color: #fff;
-  border: 1px solid #555;
+background: #2c2c2c;
+color: #ffffff;
+border: 1px solid #555;
 }
 
 /* 📋 TABLE */
 table {
-  width: 100%;
-  border-collapse: collapse;
+width: 100%;
+border-collapse: collapse;
 }
 
 th,
 td {
-  padding: 10px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
+padding: 10px;
+text-align: center;
+border-bottom: 1px solid #ddd;
+}
+
+/* ☀ LIGHT THEME - TABLE */
+body.light .dashboard .tableWrapper table {
+background: #ffffff;
+}
+
+body.light .dashboard .tableWrapper table th,
+body.light .dashboard .tableWrapper table td {
+color: #000000 !important;
+background-color: #ffffff !important;
+}
+
+/* 🌙 DARK THEME - TABLE */
+body.dark .dashboard .tableWrapper table {
+background: #1e1e1e;
+}
+
+body.dark .dashboard .tableWrapper table th,
+body.dark .dashboard .tableWrapper table td {
+color: #ffffff !important;
+background-color: #1e1e1e !important;
 }
 
 /* 🗑 DELETE BUTTON */
 .delete-btn {
-  background: red;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  cursor: pointer;
+background: red;
+color: white !important;
+border: none;
+padding: 6px 12px;
+border-radius: 6px;
+cursor: pointer;
 }
 
 /* 📄 PAGINATION */
 .pagination {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+margin-top: 20px;
+display: flex;
+justify-content: center;
+gap: 20px;
 }
 
 /* ❌ ERROR */
 .error {
-  color: red;
+color: red;
 }
 
 /* ✨ SMOOTH UI */
+
 * {
   transition: all 0.25s ease;
-}
+  }
 
-/* LIGHT MODE - ADMIN DASHBOARD TEXT */
+/* LIGHT MODE - DASHBOARD TEXT */
 body.light .dashboard,
 body.light .dashboard h1,
 body.light .dashboard h2,
 body.light .dashboard h3,
 body.light .dashboard p,
 body.light .dashboard span,
-body.light .dashboard label,
-body.light .dashboard th,
-body.light .dashboard td {
-  color: #111827 !important;
+body.light .dashboard label {
+color: #111827 !important;
 }
 
+/* LIGHT MODE - INPUT */
 body.light .dashboard input {
-  color: #111827 !important;
-  background: #ffffff !important;
+color: #111827 !important;
+background: #ffffff !important;
 }
 
 body.light .dashboard input::placeholder {
-  color: #6b7280 !important;
+color: #6b7280 !important;
 }
 
-/* Light mode - contact table text */
-body.light .dashboard table td {
-  color: #000000 !important;
-}
-
-body.light .dashboard table th {
-  color: #000000 !important;
-}
-
-/* LIGHT THEME - CONTACT DETAILS */
-body.light .dashboard table tbody tr td {
-  color: #000000 !important;
-  background-color: #ffffff !important;
-}
-
-/* Keep Delete button white */
-body.light .dashboard table tbody tr td .delete-btn {
-  color: #ffffff !important;
-}
-
-/* CONTACT TABLE - LIGHT THEME */
+/* ☀ LIGHT MODE - CONTACT DETAILS */
 body.light .dashboard .tableWrapper table tbody tr td {
-  color: #000000 !important;
+color: #000000 !important;
+background-color: #ffffff !important;
 }
 
+/* ☀ LIGHT MODE - TABLE HEADERS */
 body.light .dashboard .tableWrapper table thead tr th {
-  color: #000000 !important;
+color: #000000 !important;
+background-color: #ffffff !important;
 }
 
-/* Delete button stays white */
+/* Keep Delete button text white */
 body.light .dashboard .tableWrapper table tbody tr td .delete-btn {
-  color: #ffffff !important;
+color: #ffffff !important;
+background: red;
 }
