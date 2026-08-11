@@ -247,7 +247,16 @@ async(req,res)=>{
 
 });
 
+// ================= SERVE FRONTEND =================
+const path = require("path");
 
+// Serve static files from dist
+app.use(express.static(path.join(__dirname, "dist")));
+
+// Catch-all route (important for React Router)
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
 
 // ================= SERVER =================
 const PORT = process.env.PORT || 5000;
