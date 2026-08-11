@@ -63,7 +63,7 @@
 /* 🌞 LIGHT MODE */
 body.light .dashboard {
   background: #f5f7fb;
-  color: #222;
+  color: #111827;
 }
 
 body.light .tableWrapper {
@@ -130,4 +130,60 @@ td {
 /* ✨ SMOOTH UI */
 * {
   transition: all 0.25s ease;
+}
+
+/* LIGHT MODE - ADMIN DASHBOARD TEXT */
+body.light .dashboard,
+body.light .dashboard h1,
+body.light .dashboard h2,
+body.light .dashboard h3,
+body.light .dashboard p,
+body.light .dashboard span,
+body.light .dashboard label,
+body.light .dashboard th,
+body.light .dashboard td {
+  color: #111827 !important;
+}
+
+body.light .dashboard input {
+  color: #111827 !important;
+  background: #ffffff !important;
+}
+
+body.light .dashboard input::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Light mode - contact table text */
+body.light .dashboard table td {
+  color: #000000 !important;
+}
+
+body.light .dashboard table th {
+  color: #000000 !important;
+}
+
+/* LIGHT THEME - CONTACT DETAILS */
+body.light .dashboard table tbody tr td {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+
+/* Keep Delete button white */
+body.light .dashboard table tbody tr td .delete-btn {
+  color: #ffffff !important;
+}
+
+/* CONTACT TABLE - LIGHT THEME */
+body.light .dashboard .tableWrapper table tbody tr td {
+  color: #000000 !important;
+}
+
+body.light .dashboard .tableWrapper table thead tr th {
+  color: #000000 !important;
+}
+
+/* Delete button stays white */
+body.light .dashboard .tableWrapper table tbody tr td .delete-btn {
+  color: #ffffff !important;
 }
