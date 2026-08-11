@@ -13,7 +13,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const API = "https://personalportfolio-api-zf05.onrender.com"; // ✅ FIXED
+const API = "https://personalportfolio-api-ashy.vercel.app"; // ✅ FIXED
 
 function Dashboard({ darkMode, toggleTheme }) {
   const [contacts, setContacts] = useState([]);
@@ -43,7 +43,9 @@ function Dashboard({ darkMode, toggleTheme }) {
 
     try {
       const res = await fetch(`${API}/api/contact`, {
-        headers: { Authorization: token },
+       headers: {
+        Authorization: `Bearer ${token}`,
+      },      
       });
 
       if (!res.ok) throw new Error();
