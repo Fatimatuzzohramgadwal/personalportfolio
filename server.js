@@ -19,8 +19,13 @@ connectDB();
 
 // ================= MIDDLEWARE =================
 app.use(express.json());
-app.use(cors());
 
+app.use(cors({
+    origin: "https://personalportfolio-six-rho.vercel.app",
+    methods: ["GET", "POST", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    optionsSuccessStatus: 204
+}));
 
 // ================= ROOT ROUTE =================
 app.get("/", (req, res) => {
