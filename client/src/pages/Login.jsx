@@ -16,7 +16,7 @@ function Login() {
     try {
 
       const res = await axios.post(
-        "https://personalportfolio-api-zf05.onrender.com/api/login",
+        "https://personalportfolio-api-ashy.vercel.app/api/login",
         {
           username,
           password,

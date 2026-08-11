@@ -15,7 +15,7 @@ function Contact() {
     }
 
     try {
-      const res = await fetch("https://personalportfolio-api-zf05.onrender.com/api/contact", {
+      const res = await fetch("https://personalportfolio-api-ashy.vercel.app/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

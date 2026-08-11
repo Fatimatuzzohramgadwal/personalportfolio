@@ -20,7 +20,7 @@ function Admin() {
   try {
     const token = localStorage.getItem("token");
 
-    const res = await axios.get("https://personalportfolio-api-zf05.onrender.com/api/contact", {
+    const res = await axios.get("https://personalportfolio-api-ashy.vercel.app/api/contact", {
       headers: {
         Authorization: token,
       },
